@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nova Codice - Llevamos tu negocio al mundo digital. Desarrollo web, software a medida y gestión de redes sociales para PYMEs." />
+  <meta name="keywords" content="desarrollo web, software a medida, community manager, redes sociales, pymes, argentina" />
+  <meta name="author" content="Nova Codice" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nova Codice - Transformación Digital para PYMEs" />
+  <meta property="og:description" content="Desarrollo web, software organizativo y gestión de redes sociales. Tu puerta al mundo digital." />
+  <meta property="og:type" content="website" />
+
+  <title>Nova Codice — Tu puerta al mundo digital</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/Nova Codice Loguito.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ==============================
+       NAVBAR
+  ============================== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo" aria-label="Nova Codice - Inicio">
+        <img src="img/Nova Codice loguito 2.png" alt="Nova Codice" class="logo-img" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#valores">Valores</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#consultas" class="nav-cta">Consultanos</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#valores">Valores</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#consultas">Consultanos</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ==============================
+       HERO
+  ============================== -->
+  <section class="hero" id="inicio" aria-label="Inicio">
+    <!-- Fondo animado -->
+    <div class="hero-bg">
+      <canvas id="particleCanvas" aria-hidden="true"></canvas>
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Transformación Digital para PYMEs
+      </div>
+
+      <h1 class="hero-title">
+        Llevamos tu negocio<br />
+        <span class="gradient-text">al mundo digital</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Desarrollamos páginas web, software a medida y estrategias de contenido
+        para que tu empresa crezca en el entorno digital.
+        <strong>Todo lo que necesitás, en un solo lugar.</strong>
+      </p>
+
+      <div class="hero-actions">
+        <a href="#servicios" class="btn btn-primary">Ver Servicios</a>
+        <a href="#consultas" class="btn btn-secondary">Hablar con el equipo</a>
+      </div>
+
+      <div class="hero-stats" aria-label="Estadísticas">
+        <div class="stat">
+          <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Proyectos</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="100">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Compromiso</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-label">Servicios</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual hero (escritorio) -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card-float hero-card-1">
+        <div class="card-icon">🌐</div>
+        <div class="card-text">
+          <strong>Web Design</strong>
+          <span>Diseño moderno</span>
+        </div>
+      </div>
+
+      <div class="hero-card-float hero-card-2">
+        <div class="card-icon">⚡</div>
+        <div class="card-text">
+          <strong>Rendimiento</strong>
+          <span>100% optimizado</span>
+        </div>
+      </div>
+
+      <div class="hero-card-float hero-card-3">
+        <div class="card-icon">📱</div>
+        <div class="card-text">
+          <strong>Social Media</strong>
+          <span>Estrategia digital</span>
+        </div>
+      </div>
+
+      <div class="hero-sphere">
+        <img src="img/Nova Codice Loguito.png" alt="Nova Codice" class="hero-logo-sphere" />
+        <div class="sphere-ring sphere-ring-1"></div>
+        <div class="sphere-ring sphere-ring-2"></div>
+        <div class="sphere-ring sphere-ring-3"></div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#nosotros" class="scroll-indicator" aria-label="Ir a la sección Nosotros">
+      <span>Scroll</span>
+      <div class="scroll-arrow" aria-hidden="true"></div>
+    </a>
+  </section>
+
+
+  <!-- ==============================
+       NOSOTROS
+  ============================== -->
+  <section class="about" id="nosotros" aria-label="Quiénes somos">
+    <div class="container">
+      <div class="section-tag animate-on-scroll">Quiénes Somos</div>
+      <div class="about-grid">
+
+        <div class="about-content">
+          <h2 class="section-title animate-on-scroll">
+            Un equipo apasionado por la<br />
+            <span class="gradient-text">innovación digital</span>
+          </h2>
+
+          <p class="about-text animate-on-scroll delay-1">
+            Nova Codice nació con una misión clara:
+            <strong>democratizar el acceso al mundo digital para las pequeñas y medianas empresas.</strong>
+            Somos un equipo joven, creativo y comprometido que combina tecnología de punta con
+            estrategias de marketing efectivas y resultados concretos.
+          </p>
+
+          <p class="about-text animate-on-scroll delay-2">
+            Entendemos que cada negocio es único. Por eso, diseñamos soluciones personalizadas
+            que se adaptan a tus necesidades, presupuesto y objetivos. No vendemos productos enlatados,
+            <strong>construimos herramientas hechas a tu medida.</strong>
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight animate-on-scroll delay-2">
+              <div class="highlight-icon" aria-hidden="true">🎯</div>
+              <div>
+                <strong>Enfoque en resultados</strong>
+                <p>Cada proyecto se diseña orientado a generar impacto real en tu negocio.</p>
+              </div>
+            </div>
+            <div class="highlight animate-on-scroll delay-3">
+              <div class="highlight-icon" aria-hidden="true">🤝</div>
+              <div>
+                <strong>Relación cercana y transparente</strong>
+                <p>No somos proveedores, somos socios estratégicos de tu crecimiento.</p>
+              </div>
+            </div>
+            <div class="highlight animate-on-scroll delay-4">
+              <div class="highlight-icon" aria-hidden="true">🚀</div>
+              <div>
+                <strong>Tecnología actual</strong>
+                <p>Utilizamos las últimas herramientas y tendencias del mercado digital.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual animate-on-scroll delay-2">
+          <div class="about-card">
+            <div class="about-card-glow" aria-hidden="true"></div>
+            <img src="img/Nova Codice Loguito.png" alt="Nova Codice" class="about-logo" />
+            <h3>Nova Codice</h3>
+            <p>Tu puerta al mundo digital</p>
+            <div class="about-card-stats">
+              <div>
+                <strong>Desarrollo Web</strong>
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="--width: 95%"></div>
+                </div>
+              </div>
+              <div>
+                <strong>Software a Medida</strong>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="--width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <strong>Social Media</strong>
+                <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="--width: 88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       SERVICIOS
+  ============================== -->
+  <section class="services" id="servicios" aria-label="Nuestros servicios">
+    <div class="container">
+      <div class="section-tag text-center animate-on-scroll">Nuestros Servicios</div>
+      <h2 class="section-title text-center animate-on-scroll delay-1">
+        Todo lo que tu empresa necesita<br />
+        <span class="gradient-text">para crecer en digital</span>
+      </h2>
+      <p class="section-subtitle text-center animate-on-scroll delay-2">
+        Tres pilares de servicio que cubren todas las necesidades digitales de tu negocio,
+        desde la presencia web hasta la comunidad en redes.
+      </p>
+
+      <!-- Tabs -->
+      <div class="service-tabs animate-on-scroll delay-3" role="tablist" aria-label="Categorías de servicios">
+        <button class="tab-btn active" data-tab="web" role="tab" aria-selected="true" aria-controls="tab-web" id="btn-web">
+          <span class="tab-icon" aria-hidden="true">🌐</span>
+          Desarrollo Web
+        </button>
+        <button class="tab-btn" data-tab="software" role="tab" aria-selected="false" aria-controls="tab-software" id="btn-software">
+          <span class="tab-icon" aria-hidden="true">💻</span>
+          Software a Medida
+        </button>
+        <button class="tab-btn" data-tab="social" role="tab" aria-selected="false" aria-controls="tab-social" id="btn-social">
+          <span class="tab-icon" aria-hidden="true">📱</span>
+          Redes Sociales
+        </button>
+      </div>
+
+      <!-- Panel: Desarrollo Web -->
+      <div class="tab-panel active" id="tab-web" role="tabpanel" aria-labelledby="btn-web">
+        <div class="panel-grid">
+          <div class="panel-content">
+            <div class="panel-tag">Desarrollo Web</div>
+            <h3>Presencia digital que<br /><span class="gradient-text">convierte visitantes</span> en clientes</h3>
+            <p>
+              Diseñamos y desarrollamos páginas web modernas, rápidas y responsivas que reflejan
+              la identidad de tu marca y generan resultados concretos. Desde una landing page de
+              alto impacto hasta un e-commerce completo.
+            </p>
+            <ul class="service-list">
+              <li><span class="check" aria-hidden="true">✓</span> Landing Pages de alta conversión</li>
+              <li><span class="check" aria-hidden="true">✓</span> Sitios web institucionales y corporativos</li>
+              <li><span class="check" aria-hidden="true">✓</span> E-commerce y tiendas online</li>
+              <li><span class="check" aria-hidden="true">✓</span> Diseño UX/UI personalizado desde cero</li>
+              <li><span class="check" aria-hidden="true">✓</span> Optimización SEO básica incluida</li>
+              <li><span class="check" aria-hidden="true">✓</span> Diseño 100% responsive (mobile-first)</li>
+              <li><span class="check" aria-hidden="true">✓</span> Integración con Google Analytics</li>
+              <li><span class="check" aria-hidden="true">✓</span> Hosting y dominio asesorado</li>
+            </ul>
+            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto →</a>
+          </div>
+
+          <div class="panel-cards">
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">🎨</span>
+              <h4>Diseño único</h4>
+              <p>Cada sitio es diseñado desde cero, sin templates genéricos.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">⚡</span>
+              <h4>Alto rendimiento</h4>
+              <p>Optimizamos velocidad de carga en todos los dispositivos.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">🔒</span>
+              <h4>Seguridad incluida</h4>
+              <p>SSL, backups y mantenimiento para estar siempre online.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">📊</span>
+              <h4>Analytics integrado</h4>
+              <p>Seguimiento de métricas para decisiones basadas en datos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel: Software -->
+      <div class="tab-panel" id="tab-software" role="tabpanel" aria-labelledby="btn-software">
+        <div class="panel-grid">
+          <div class="panel-content">
+            <div class="panel-tag">Software a Medida</div>
+            <h3>Herramientas digitales<br /><span class="gradient-text">hechas para tu negocio</span></h3>
+            <p>
+              Desarrollamos software personalizado que automatiza procesos, mejora la organización
+              interna y aumenta la productividad de tu equipo. Sin sistemas genéricos, sin funciones
+              que no usás, sin limitaciones.
+            </p>
+            <ul class="service-list">
+              <li><span class="check" aria-hidden="true">✓</span> Sistemas de gestión (CRM / ERP)</li>
+              <li><span class="check" aria-hidden="true">✓</span> Automatización de tareas repetitivas</li>
+              <li><span class="check" aria-hidden="true">✓</span> Paneles de control y dashboards</li>
+              <li><span class="check" aria-hidden="true">✓</span> Aplicaciones web internas</li>
+              <li><span class="check" aria-hidden="true">✓</span> Integración con sistemas existentes</li>
+              <li><span class="check" aria-hidden="true">✓</span> Gestión de stock e inventarios</li>
+              <li><span class="check" aria-hidden="true">✓</span> Reportes y análisis de datos</li>
+              <li><span class="check" aria-hidden="true">✓</span> Soporte y mantenimiento continuo</li>
+            </ul>
+            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto →</a>
+          </div>
+
+          <div class="panel-cards">
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">🗄️</span>
+              <h4>Gestión centralizada</h4>
+              <p>Todo tu negocio en un único sistema integrado y claro.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">🤖</span>
+              <h4>Automatización</h4>
+              <p>Eliminá tareas manuales y enfocate en lo que importa.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">📈</span>
+              <h4>Escalable</h4>
+              <p>Software que crece junto con tu empresa sin límites.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">🛡️</span>
+              <h4>Soporte continuo</h4>
+              <p>Acompañamiento técnico permanente para que nunca pares.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel: Social Media -->
+      <div class="tab-panel" id="tab-social" role="tabpanel" aria-labelledby="btn-social">
+        <div class="panel-grid">
+          <div class="panel-content">
+            <div class="panel-tag">Redes Sociales & Community</div>
+            <h3>Tu marca,<br /><span class="gradient-text">presente y activa</span> en redes</h3>
+            <p>
+              Creamos y gestionamos el contenido de tus redes sociales con estrategia, creatividad
+              y consistencia. Tu comunidad crece de forma orgánica mientras vos te dedicás
+              a tu negocio.
+            </p>
+            <ul class="service-list">
+              <li><span class="check" aria-hidden="true">✓</span> Estrategia de contenidos mensual</li>
+              <li><span class="check" aria-hidden="true">✓</span> Diseño de posts, stories y reels</li>
+              <li><span class="check" aria-hidden="true">✓</span> Redacción de copies profesionales</li>
+              <li><span class="check" aria-hidden="true">✓</span> Gestión de Instagram, Facebook y TikTok</li>
+              <li><span class="check" aria-hidden="true">✓</span> Producción de video y contenido audiovisual</li>
+              <li><span class="check" aria-hidden="true">✓</span> Community Management (respuesta a comentarios)</li>
+              <li><span class="check" aria-hidden="true">✓</span> Calendario editorial mensual</li>
+              <li><span class="check" aria-hidden="true">✓</span> Reportes mensuales de métricas</li>
+            </ul>
+            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto →</a>
+          </div>
+
+          <div class="panel-cards">
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">✍️</span>
+              <h4>Contenido original</h4>
+              <p>Posts, stories y reels creados específicamente para tu marca.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">💬</span>
+              <h4>Comunidad activa</h4>
+              <p>Moderamos y respondemos tu comunidad a diario.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">📅</span>
+              <h4>Calendario editorial</h4>
+              <p>Planificación mensual con fechas y temáticas definidas.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card-icon" aria-hidden="true">📊</span>
+              <h4>Análisis de resultados</h4>
+              <p>Reportes claros sobre el impacto de cada publicación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       VALORES
+  ============================== -->
+  <section class="values" id="valores" aria-label="Nuestros valores">
+    <div class="container">
+      <div class="section-tag text-center animate-on-scroll">Nuestros Valores</div>
+      <h2 class="section-title text-center animate-on-scroll delay-1">
+        Lo que nos <span class="gradient-text">define e impulsa</span>
+      </h2>
+      <p class="section-subtitle text-center animate-on-scroll delay-2">
+        Más que un servicio, somos aliados estratégicos comprometidos con el
+        crecimiento real y sostenido de tu empresa.
+      </p>
+
+      <div class="values-grid">
+        <div class="value-card animate-on-scroll delay-1">
+          <div class="value-number" aria-hidden="true">01</div>
+          <span class="value-icon" aria-hidden="true">💡</span>
+          <h3>Innovación constante</h3>
+          <p>Nos mantenemos al día con las últimas tendencias tecnológicas para ofrecerte siempre las mejores soluciones disponibles en el mercado.</p>
+        </div>
+        <div class="value-card animate-on-scroll delay-2">
+          <div class="value-number" aria-hidden="true">02</div>
+          <span class="value-icon" aria-hidden="true">🎯</span>
+          <h3>Enfoque en resultados</h3>
+          <p>No trabajamos por trabajar. Cada acción está orientada a generar un impacto medible y positivo en tu negocio desde el primer día.</p>
+        </div>
+        <div class="value-card animate-on-scroll delay-3">
+          <div class="value-number" aria-hidden="true">03</div>
+          <span class="value-icon" aria-hidden="true">🤝</span>
+          <h3>Transparencia total</h3>
+          <p>Comunicación clara, presupuestos detallados y seguimiento constante. Siempre sabés en qué etapa estamos y qué viene después.</p>
+        </div>
+        <div class="value-card animate-on-scroll delay-1">
+          <div class="value-number" aria-hidden="true">04</div>
+          <span class="value-icon" aria-hidden="true">❤️</span>
+          <h3>Pasión por lo que hacemos</h3>
+          <p>Amamos la tecnología y el diseño. Esa pasión se refleja en la calidad y el detalle de cada proyecto que ponemos en marcha.</p>
+        </div>
+        <div class="value-card animate-on-scroll delay-2">
+          <div class="value-number" aria-hidden="true">05</div>
+          <span class="value-icon" aria-hidden="true">🌱</span>
+          <h3>Crecimiento compartido</h3>
+          <p>Tu éxito es nuestro éxito. Creemos en relaciones a largo plazo donde ambas partes crezcan y se beneficien mutuamente.</p>
+        </div>
+        <div class="value-card animate-on-scroll delay-3">
+          <div class="value-number" aria-hidden="true">06</div>
+          <span class="value-icon" aria-hidden="true">⚡</span>
+          <h3>Agilidad y rapidez</h3>
+          <p>Procesos ágiles, entregas a tiempo y respuesta rápida. Valoramos tu tiempo tanto como el nuestro y eso se nota en la práctica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       PROCESO
+  ============================== -->
+  <section class="process" id="proceso" aria-label="Cómo trabajamos">
+    <div class="container">
+      <div class="section-tag text-center animate-on-scroll">Cómo Trabajamos</div>
+      <h2 class="section-title text-center animate-on-scroll delay-1">
+        Un proceso claro <span class="gradient-text">y sin sorpresas</span>
+      </h2>
+      <p class="section-subtitle text-center animate-on-scroll delay-2">
+        Trabajamos de forma organizada y transparente para que siempre sepas
+        qué está pasando con tu proyecto en cada etapa.
+      </p>
+
+      <div class="process-steps">
+
+        <div class="process-step animate-on-scroll">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-content">
+            <span class="step-icon" aria-hidden="true">💬</span>
+            <h3>Consulta inicial gratuita</h3>
+            <p>Hablamos con vos para entender tu negocio, tus objetivos y lo que necesitás.
+            Sin compromisos, sin costos. Solo una charla para conocernos y ver cómo podemos ayudarte.</p>
+          </div>
+        </div>
+
+        <div class="process-step animate-on-scroll delay-1">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-content">
+            <span class="step-icon" aria-hidden="true">📋</span>
+            <h3>Propuesta personalizada</h3>
+            <p>Elaboramos una propuesta detallada con alcance del proyecto, tiempos de entrega
+            y presupuesto transparente. Todo claro antes de arrancar, sin letra chica.</p>
+          </div>
+        </div>
+
+        <div class="process-step animate-on-scroll delay-2">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-content">
+            <span class="step-icon" aria-hidden="true">🎨</span>
+            <h3>Diseño y desarrollo</h3>
+            <p>Nuestro equipo trabaja en tu proyecto con actualizaciones periódicas para que
+            puedas ver el avance. Tu feedback es parte del proceso en todo momento.</p>
+          </div>
+        </div>
+
+        <div class="process-step animate-on-scroll delay-3">
+          <div class="step-number" aria-hidden="true">04</div>
+          <div class="step-content">
+            <span class="step-icon" aria-hidden="true">✅</span>
+            <h3>Revisión y ajustes</h3>
+            <p>Presentamos el trabajo terminado y realizamos todos los ajustes necesarios
+            hasta que estés 100% conforme. Tu satisfacción es el criterio de aprobación.</p>
+          </div>
+        </div>
+
+        <div class="process-step animate-on-scroll delay-4">
+          <div class="step-number" aria-hidden="true">05</div>
+          <div class="step-content">
+            <span class="step-icon" aria-hidden="true">🚀</span>
+            <h3>Lanzamiento y soporte</h3>
+            <p>Ponemos todo en marcha y te acompañamos durante el lanzamiento con soporte
+            técnico continuo. No te dejamos solo cuando empieza lo bueno.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       CONTACTO
+  ============================== -->
+  <section class="contact" id="consultas" aria-label="Sección de consultas">
+    <div class="container">
+      <div class="section-tag text-center animate-on-scroll">Consultanos</div>
+      <h2 class="section-title text-center animate-on-scroll delay-1">
+        ¿Listo para dar el <span class="gradient-text">salto digital</span>?
+      </h2>
+      <p class="section-subtitle text-center animate-on-scroll delay-2">
+        Completá el formulario y nos ponemos en contacto a la brevedad.
+        La consulta inicial es <strong>completamente gratuita.</strong>
+      </p>
+
+      <div class="contact-grid">
+
+        <!-- Info lateral -->
+        <div class="contact-info animate-on-scroll">
+          <h3>¿Por qué elegirnos?</h3>
+
+          <div class="contact-feature">
+            <div class="cf-icon" aria-hidden="true">⚡</div>
+            <div>
+              <strong>Respuesta rápida</strong>
+              <p>Te respondemos en menos de 24 horas hábiles.</p>
+            </div>
+          </div>
+
+          <div class="contact-feature">
+            <div class="cf-icon" aria-hidden="true">💰</div>
+            <div>
+              <strong>Precios accesibles</strong>
+              <p>Planes adaptados a presupuestos de PYMEs y emprendedores.</p>
+            </div>
+          </div>
+
+          <div class="contact-feature">
+            <div class="cf-icon" aria-hidden="true">🎯</div>
+            <div>
+              <strong>Sin letra chica</strong>
+              <p>Todo claro desde el principio, sin sorpresas ni costos ocultos.</p>
+            </div>
+          </div>
+
+          <div class="contact-feature">
+            <div class="cf-icon" aria-hidden="true">🌍</div>
+            <div>
+              <strong>Trabajo 100% remoto</strong>
+              <p>Trabajamos con empresas de cualquier punto de Argentina.</p>
+            </div>
+          </div>
+
+          <div class="contact-feature">
+            <div class="cf-icon" aria-hidden="true">🔄</div>
+            <div>
+              <strong>Revisiones incluidas</strong>
+              <p>Ajustamos hasta que el resultado sea exactamente lo que imaginaste.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="contact-form-wrapper animate-on-scroll delay-2">
+          <!--
+            ============================================================
+            IMPORTANTE: Reemplazá "TU_CORREO@ejemplo.com" con tu email real.
+            FormSubmit enviará las consultas a esa dirección.
+            La primera vez que se envíe un formulario, FormSubmit te pedirá
+            confirmar el email. Luego funciona automáticamente.
+            ============================================================
+          -->
+          <form
+            action="https://formsubmit.co/TU_CORREO@ejemplo.com"
+            method="POST"
+            class="contact-form"
+            id="contactForm"
+            novalidate
+          >
+            <!-- Configuración FormSubmit -->
+            <input type="hidden" name="_subject" value="Nueva consulta desde Nova Codice 🚀" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <!-- Desactivar redirección automática (opcional: podés poner una URL de "gracias") -->
+            <input type="hidden" name="_next" value="" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ej: María García"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="empresa">Empresa / Emprendimiento</label>
+                <input
+                  type="text"
+                  id="empresa"
+                  name="empresa"
+                  placeholder="Ej: Mi Empresa S.A."
+                  autocomplete="organization"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Ej: maria@miempresa.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="Ej: +54 9 11 1234-5678"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="servicio">¿Qué servicio te interesa? <span aria-hidden="true">*</span></label>
+              <select id="servicio" name="servicio" required>
+                <option value="">Seleccioná una opción...</option>
+                <option value="Desarrollo Web">🌐 Desarrollo Web</option>
+                <option value="Software a Medida">💻 Software a Medida</option>
+                <option value="Redes Sociales / Community Manager">📱 Redes Sociales / Community Manager</option>
+                <option value="Pack Completo (Web + Redes)">🚀 Pack Completo (Web + Redes)</option>
+                <option value="Consulta General">💬 Consulta general</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Contanos sobre tu proyecto <span aria-hidden="true">*</span></label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                placeholder="Describinos brevemente tu negocio, qué necesitás y cuáles son tus objetivos..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Enviar consulta</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+
+            <p class="form-note">
+              Al enviar aceptás que nos comuniquemos con vos para responder tu consulta.
+              No compartimos tu información con terceros.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img src="img/Nova Codice loguito 2.png" alt="Nova Codice" class="footer-logo" />
+          <p>
+            Llevamos tu negocio al mundo digital. Desarrollo web, software a medida y
+            gestión de redes sociales para PYMEs y emprendedores.
+          </p>
+          <div class="footer-social" aria-label="Redes sociales de Nova Codice">
+            <a href="#" class="social-icon" aria-label="Instagram de Nova Codice" rel="noopener noreferrer">
+              <!-- Instagram SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn de Nova Codice" rel="noopener noreferrer">
+              <!-- LinkedIn SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter / X de Nova Codice" rel="noopener noreferrer">
+              <!-- X / Twitter SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links: Servicios -->
+        <div class="footer-links">
+          <h4>Servicios</h4>
+          <ul role="list">
+            <li><a href="#servicios">Desarrollo Web</a></li>
+            <li><a href="#servicios">Software a Medida</a></li>
+            <li><a href="#servicios">Redes Sociales</a></li>
+            <li><a href="#servicios">Community Manager</a></li>
+            <li><a href="#servicios">Pack Completo</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Empresa -->
+        <div class="footer-links">
+          <h4>Empresa</h4>
+          <ul role="list">
+            <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="#valores">Nuestros valores</a></li>
+            <li><a href="#proceso">Cómo trabajamos</a></li>
+            <li><a href="#consultas">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto directo -->
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <a href="mailto:novacodice@gmail.com" class="footer-email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            novacodice@gmail.com
+          </a>
+          <p class="footer-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Argentina · 100% remoto
+          </p>
+          <a href="#consultas" class="btn btn-primary btn-sm">Solicitar consulta</a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 Nova Codice. Todos los derechos reservados.</p>
+        <p>Hecho con ❤️ por el equipo Nova Codice</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
