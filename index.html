@@ -6,34 +6,47 @@
   <meta name="description" content="Nova Codice - Llevamos tu negocio al mundo digital. Desarrollo web, software a medida y gestión de redes sociales para PYMEs." />
   <meta name="keywords" content="desarrollo web, software a medida, community manager, redes sociales, pymes, argentina" />
   <meta name="author" content="Nova Codice" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Nova Codice - Transformación Digital para PYMEs" />
   <meta property="og:description" content="Desarrollo web, software organizativo y gestión de redes sociales. Tu puerta al mundo digital." />
   <meta property="og:type" content="website" />
 
   <title>Nova Codice — Tu puerta al mundo digital</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/Nova Codice Loguito.png" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Outfit (display) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- Estilos -->
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
+  <!-- Esferas de fondo fijas (visibles en toda la página) -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+    <div class="bg-orb bg-orb-5"></div>
+  </div>
 
   <!-- ==============================
        NAVBAR
   ============================== -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
     <div class="nav-container">
+
+      <!-- Logo: ícono imagen + texto -->
       <a href="#inicio" class="nav-logo" aria-label="Nova Codice - Inicio">
-        <img src="img/Nova Codice loguito 2.png" alt="Nova Codice" class="logo-img" />
+        <img src="img/Nova Codice Loguito.png" class="nav-logo-icon" alt="" aria-hidden="true" />
+        <span class="logo-wordmark">
+          <span class="logo-nova">Nova</span><span class="logo-codice">Codice</span>
+        </span>
       </a>
 
       <ul class="nav-links" role="list">
@@ -45,9 +58,7 @@
       </ul>
 
       <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
@@ -68,12 +79,8 @@
        HERO
   ============================== -->
   <section class="hero" id="inicio" aria-label="Inicio">
-    <!-- Fondo animado -->
     <div class="hero-bg">
       <canvas id="particleCanvas" aria-hidden="true"></canvas>
-      <div class="orb orb-1" aria-hidden="true"></div>
-      <div class="orb orb-2" aria-hidden="true"></div>
-      <div class="orb orb-3" aria-hidden="true"></div>
     </div>
 
     <!-- Contenido principal -->
@@ -120,7 +127,7 @@
     <!-- Visual hero (escritorio) -->
     <div class="hero-visual" aria-hidden="true">
       <div class="hero-card-float hero-card-1">
-        <div class="card-icon">🌐</div>
+        <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
         <div class="card-text">
           <strong>Web Design</strong>
           <span>Diseño moderno</span>
@@ -128,7 +135,7 @@
       </div>
 
       <div class="hero-card-float hero-card-2">
-        <div class="card-icon">⚡</div>
+        <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
         <div class="card-text">
           <strong>Rendimiento</strong>
           <span>100% optimizado</span>
@@ -136,7 +143,7 @@
       </div>
 
       <div class="hero-card-float hero-card-3">
-        <div class="card-icon">📱</div>
+        <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
         <div class="card-text">
           <strong>Social Media</strong>
           <span>Estrategia digital</span>
@@ -151,7 +158,6 @@
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
     <a href="#nosotros" class="scroll-indicator" aria-label="Ir a la sección Nosotros">
       <span>Scroll</span>
       <div class="scroll-arrow" aria-hidden="true"></div>
@@ -188,21 +194,27 @@
 
           <div class="about-highlights">
             <div class="highlight animate-on-scroll delay-2">
-              <div class="highlight-icon" aria-hidden="true">🎯</div>
+              <div class="highlight-icon" aria-hidden="true">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
               <div>
                 <strong>Enfoque en resultados</strong>
                 <p>Cada proyecto se diseña orientado a generar impacto real en tu negocio.</p>
               </div>
             </div>
             <div class="highlight animate-on-scroll delay-3">
-              <div class="highlight-icon" aria-hidden="true">🤝</div>
+              <div class="highlight-icon" aria-hidden="true">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
               <div>
                 <strong>Relación cercana y transparente</strong>
                 <p>No somos proveedores, somos socios estratégicos de tu crecimiento.</p>
               </div>
             </div>
             <div class="highlight animate-on-scroll delay-4">
-              <div class="highlight-icon" aria-hidden="true">🚀</div>
+              <div class="highlight-icon" aria-hidden="true">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
               <div>
                 <strong>Tecnología actual</strong>
                 <p>Utilizamos las últimas herramientas y tendencias del mercado digital.</p>
@@ -217,23 +229,32 @@
             <img src="img/Nova Codice Loguito.png" alt="Nova Codice" class="about-logo" />
             <h3>Nova Codice</h3>
             <p>Tu puerta al mundo digital</p>
-            <div class="about-card-stats">
-              <div>
-                <strong>Desarrollo Web</strong>
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-fill" style="--width: 95%"></div>
+            <div class="about-card-features">
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="about-feature-text">
+                  <strong>Desarrollo Web</strong>
+                  <span>Sitios modernos y rápidos</span>
                 </div>
               </div>
-              <div>
-                <strong>Software a Medida</strong>
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-fill" style="--width: 90%"></div>
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="about-feature-text">
+                  <strong>Software a Medida</strong>
+                  <span>Soluciones a tu medida</span>
                 </div>
               </div>
-              <div>
-                <strong>Social Media</strong>
-                <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-fill" style="--width: 88%"></div>
+              <div class="about-feature">
+                <div class="about-feature-icon" aria-hidden="true">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <div class="about-feature-text">
+                  <strong>Social Media</strong>
+                  <span>Estrategia y contenido</span>
                 </div>
               </div>
             </div>
@@ -263,15 +284,15 @@
       <!-- Tabs -->
       <div class="service-tabs animate-on-scroll delay-3" role="tablist" aria-label="Categorías de servicios">
         <button class="tab-btn active" data-tab="web" role="tab" aria-selected="true" aria-controls="tab-web" id="btn-web">
-          <span class="tab-icon" aria-hidden="true">🌐</span>
+          <i class="fa-solid fa-globe tab-icon" aria-hidden="true"></i>
           Desarrollo Web
         </button>
         <button class="tab-btn" data-tab="software" role="tab" aria-selected="false" aria-controls="tab-software" id="btn-software">
-          <span class="tab-icon" aria-hidden="true">💻</span>
+          <i class="fa-solid fa-laptop-code tab-icon" aria-hidden="true"></i>
           Software a Medida
         </button>
         <button class="tab-btn" data-tab="social" role="tab" aria-selected="false" aria-controls="tab-social" id="btn-social">
-          <span class="tab-icon" aria-hidden="true">📱</span>
+          <i class="fa-solid fa-mobile-screen tab-icon" aria-hidden="true"></i>
           Redes Sociales
         </button>
       </div>
@@ -288,36 +309,36 @@
               alto impacto hasta un e-commerce completo.
             </p>
             <ul class="service-list">
-              <li><span class="check" aria-hidden="true">✓</span> Landing Pages de alta conversión</li>
-              <li><span class="check" aria-hidden="true">✓</span> Sitios web institucionales y corporativos</li>
-              <li><span class="check" aria-hidden="true">✓</span> E-commerce y tiendas online</li>
-              <li><span class="check" aria-hidden="true">✓</span> Diseño UX/UI personalizado desde cero</li>
-              <li><span class="check" aria-hidden="true">✓</span> Optimización SEO básica incluida</li>
-              <li><span class="check" aria-hidden="true">✓</span> Diseño 100% responsive (mobile-first)</li>
-              <li><span class="check" aria-hidden="true">✓</span> Integración con Google Analytics</li>
-              <li><span class="check" aria-hidden="true">✓</span> Hosting y dominio asesorado</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Landing Pages de alta conversión</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Sitios web institucionales y corporativos</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> E-commerce y tiendas online</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Diseño UX/UI personalizado desde cero</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Optimización SEO básica incluida</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Diseño 100% responsive (mobile-first)</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Integración con Google Analytics</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Hosting y dominio asesorado</li>
             </ul>
-            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto →</a>
+            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto <i class="fa-solid fa-arrow-right"></i></a>
           </div>
 
           <div class="panel-cards">
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">🎨</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-pen-ruler"></i></span>
               <h4>Diseño único</h4>
               <p>Cada sitio es diseñado desde cero, sin templates genéricos.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">⚡</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-bolt"></i></span>
               <h4>Alto rendimiento</h4>
               <p>Optimizamos velocidad de carga en todos los dispositivos.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">🔒</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-lock"></i></span>
               <h4>Seguridad incluida</h4>
               <p>SSL, backups y mantenimiento para estar siempre online.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">📊</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-bar"></i></span>
               <h4>Analytics integrado</h4>
               <p>Seguimiento de métricas para decisiones basadas en datos.</p>
             </div>
@@ -337,36 +358,36 @@
               que no usás, sin limitaciones.
             </p>
             <ul class="service-list">
-              <li><span class="check" aria-hidden="true">✓</span> Sistemas de gestión (CRM / ERP)</li>
-              <li><span class="check" aria-hidden="true">✓</span> Automatización de tareas repetitivas</li>
-              <li><span class="check" aria-hidden="true">✓</span> Paneles de control y dashboards</li>
-              <li><span class="check" aria-hidden="true">✓</span> Aplicaciones web internas</li>
-              <li><span class="check" aria-hidden="true">✓</span> Integración con sistemas existentes</li>
-              <li><span class="check" aria-hidden="true">✓</span> Gestión de stock e inventarios</li>
-              <li><span class="check" aria-hidden="true">✓</span> Reportes y análisis de datos</li>
-              <li><span class="check" aria-hidden="true">✓</span> Soporte y mantenimiento continuo</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Sistemas de gestión (CRM / ERP)</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Automatización de tareas repetitivas</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Paneles de control y dashboards</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Aplicaciones web internas</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Integración con sistemas existentes</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Gestión de stock e inventarios</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Reportes y análisis de datos</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Soporte y mantenimiento continuo</li>
             </ul>
-            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto →</a>
+            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto <i class="fa-solid fa-arrow-right"></i></a>
           </div>
 
           <div class="panel-cards">
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">🗄️</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></span>
               <h4>Gestión centralizada</h4>
               <p>Todo tu negocio en un único sistema integrado y claro.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">🤖</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-robot"></i></span>
               <h4>Automatización</h4>
               <p>Eliminá tareas manuales y enfocate en lo que importa.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">📈</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
               <h4>Escalable</h4>
               <p>Software que crece junto con tu empresa sin límites.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">🛡️</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-headset"></i></span>
               <h4>Soporte continuo</h4>
               <p>Acompañamiento técnico permanente para que nunca pares.</p>
             </div>
@@ -378,7 +399,7 @@
       <div class="tab-panel" id="tab-social" role="tabpanel" aria-labelledby="btn-social">
         <div class="panel-grid">
           <div class="panel-content">
-            <div class="panel-tag">Redes Sociales & Community</div>
+            <div class="panel-tag">Redes Sociales &amp; Community</div>
             <h3>Tu marca,<br /><span class="gradient-text">presente y activa</span> en redes</h3>
             <p>
               Creamos y gestionamos el contenido de tus redes sociales con estrategia, creatividad
@@ -386,36 +407,36 @@
               a tu negocio.
             </p>
             <ul class="service-list">
-              <li><span class="check" aria-hidden="true">✓</span> Estrategia de contenidos mensual</li>
-              <li><span class="check" aria-hidden="true">✓</span> Diseño de posts, stories y reels</li>
-              <li><span class="check" aria-hidden="true">✓</span> Redacción de copies profesionales</li>
-              <li><span class="check" aria-hidden="true">✓</span> Gestión de Instagram, Facebook y TikTok</li>
-              <li><span class="check" aria-hidden="true">✓</span> Producción de video y contenido audiovisual</li>
-              <li><span class="check" aria-hidden="true">✓</span> Community Management (respuesta a comentarios)</li>
-              <li><span class="check" aria-hidden="true">✓</span> Calendario editorial mensual</li>
-              <li><span class="check" aria-hidden="true">✓</span> Reportes mensuales de métricas</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Estrategia de contenidos mensual</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Diseño de posts, stories y reels</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Redacción de copies profesionales</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Gestión de Instagram, Facebook y TikTok</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Producción de video y contenido audiovisual</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Community Management (respuesta a comentarios)</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Calendario editorial mensual</li>
+              <li><span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Reportes mensuales de métricas</li>
             </ul>
-            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto →</a>
+            <a href="#consultas" class="btn btn-primary">Solicitar presupuesto <i class="fa-solid fa-arrow-right"></i></a>
           </div>
 
           <div class="panel-cards">
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">✍️</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-pen-nib"></i></span>
               <h4>Contenido original</h4>
               <p>Posts, stories y reels creados específicamente para tu marca.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">💬</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
               <h4>Comunidad activa</h4>
               <p>Moderamos y respondemos tu comunidad a diario.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">📅</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-regular fa-calendar-days"></i></span>
               <h4>Calendario editorial</h4>
               <p>Planificación mensual con fechas y temáticas definidas.</p>
             </div>
             <div class="service-card">
-              <span class="service-card-icon" aria-hidden="true">📊</span>
+              <span class="service-card-icon" aria-hidden="true"><i class="fa-solid fa-chart-pie"></i></span>
               <h4>Análisis de resultados</h4>
               <p>Reportes claros sobre el impacto de cada publicación.</p>
             </div>
@@ -443,39 +464,39 @@
       <div class="values-grid">
         <div class="value-card animate-on-scroll delay-1">
           <div class="value-number" aria-hidden="true">01</div>
-          <span class="value-icon" aria-hidden="true">💡</span>
+          <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></span>
           <h3>Innovación constante</h3>
-          <p>Nos mantenemos al día con las últimas tendencias tecnológicas para ofrecerte siempre las mejores soluciones disponibles en el mercado.</p>
+          <p>Nos mantenemos al día con las últimas tendencias tecnológicas para ofrecerte siempre las mejores soluciones disponibles.</p>
         </div>
         <div class="value-card animate-on-scroll delay-2">
           <div class="value-number" aria-hidden="true">02</div>
-          <span class="value-icon" aria-hidden="true">🎯</span>
+          <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></span>
           <h3>Enfoque en resultados</h3>
-          <p>No trabajamos por trabajar. Cada acción está orientada a generar un impacto medible y positivo en tu negocio desde el primer día.</p>
+          <p>No trabajamos por trabajar. Cada acción está orientada a generar un impacto medible y positivo en tu negocio.</p>
         </div>
         <div class="value-card animate-on-scroll delay-3">
           <div class="value-number" aria-hidden="true">03</div>
-          <span class="value-icon" aria-hidden="true">🤝</span>
+          <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span>
           <h3>Transparencia total</h3>
-          <p>Comunicación clara, presupuestos detallados y seguimiento constante. Siempre sabés en qué etapa estamos y qué viene después.</p>
+          <p>Comunicación clara, presupuestos detallados y seguimiento constante. Siempre sabés en qué etapa estamos.</p>
         </div>
         <div class="value-card animate-on-scroll delay-1">
           <div class="value-number" aria-hidden="true">04</div>
-          <span class="value-icon" aria-hidden="true">❤️</span>
+          <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
           <h3>Pasión por lo que hacemos</h3>
-          <p>Amamos la tecnología y el diseño. Esa pasión se refleja en la calidad y el detalle de cada proyecto que ponemos en marcha.</p>
+          <p>Amamos la tecnología y el diseño. Esa pasión se refleja en la calidad y el detalle de cada proyecto.</p>
         </div>
         <div class="value-card animate-on-scroll delay-2">
           <div class="value-number" aria-hidden="true">05</div>
-          <span class="value-icon" aria-hidden="true">🌱</span>
+          <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
           <h3>Crecimiento compartido</h3>
-          <p>Tu éxito es nuestro éxito. Creemos en relaciones a largo plazo donde ambas partes crezcan y se beneficien mutuamente.</p>
+          <p>Tu éxito es nuestro éxito. Creemos en relaciones a largo plazo donde ambas partes crecen juntas.</p>
         </div>
         <div class="value-card animate-on-scroll delay-3">
           <div class="value-number" aria-hidden="true">06</div>
-          <span class="value-icon" aria-hidden="true">⚡</span>
+          <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-bolt"></i></span>
           <h3>Agilidad y rapidez</h3>
-          <p>Procesos ágiles, entregas a tiempo y respuesta rápida. Valoramos tu tiempo tanto como el nuestro y eso se nota en la práctica.</p>
+          <p>Procesos ágiles, entregas a tiempo y respuesta rápida. Valoramos tu tiempo tanto como el nuestro.</p>
         </div>
       </div>
     </div>
@@ -497,57 +518,50 @@
       </p>
 
       <div class="process-steps">
-
         <div class="process-step animate-on-scroll">
           <div class="step-number" aria-hidden="true">01</div>
           <div class="step-content">
-            <span class="step-icon" aria-hidden="true">💬</span>
+            <span class="step-icon" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
             <h3>Consulta inicial gratuita</h3>
-            <p>Hablamos con vos para entender tu negocio, tus objetivos y lo que necesitás.
-            Sin compromisos, sin costos. Solo una charla para conocernos y ver cómo podemos ayudarte.</p>
+            <p>Hablamos con vos para entender tu negocio, tus objetivos y lo que necesitás. Sin compromisos, sin costos.</p>
           </div>
         </div>
 
         <div class="process-step animate-on-scroll delay-1">
           <div class="step-number" aria-hidden="true">02</div>
           <div class="step-content">
-            <span class="step-icon" aria-hidden="true">📋</span>
+            <span class="step-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-list"></i></span>
             <h3>Propuesta personalizada</h3>
-            <p>Elaboramos una propuesta detallada con alcance del proyecto, tiempos de entrega
-            y presupuesto transparente. Todo claro antes de arrancar, sin letra chica.</p>
+            <p>Elaboramos una propuesta detallada con alcance, tiempos y presupuesto transparente. Todo claro antes de arrancar.</p>
           </div>
         </div>
 
         <div class="process-step animate-on-scroll delay-2">
           <div class="step-number" aria-hidden="true">03</div>
           <div class="step-content">
-            <span class="step-icon" aria-hidden="true">🎨</span>
+            <span class="step-icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
             <h3>Diseño y desarrollo</h3>
-            <p>Nuestro equipo trabaja en tu proyecto con actualizaciones periódicas para que
-            puedas ver el avance. Tu feedback es parte del proceso en todo momento.</p>
+            <p>Nuestro equipo trabaja con actualizaciones periódicas para que puedas ver el avance. Tu feedback es parte del proceso.</p>
           </div>
         </div>
 
         <div class="process-step animate-on-scroll delay-3">
           <div class="step-number" aria-hidden="true">04</div>
           <div class="step-content">
-            <span class="step-icon" aria-hidden="true">✅</span>
+            <span class="step-icon" aria-hidden="true"><i class="fa-solid fa-circle-check"></i></span>
             <h3>Revisión y ajustes</h3>
-            <p>Presentamos el trabajo terminado y realizamos todos los ajustes necesarios
-            hasta que estés 100% conforme. Tu satisfacción es el criterio de aprobación.</p>
+            <p>Presentamos el trabajo terminado y realizamos todos los ajustes hasta que estés 100% conforme.</p>
           </div>
         </div>
 
         <div class="process-step animate-on-scroll delay-4">
           <div class="step-number" aria-hidden="true">05</div>
           <div class="step-content">
-            <span class="step-icon" aria-hidden="true">🚀</span>
+            <span class="step-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></span>
             <h3>Lanzamiento y soporte</h3>
-            <p>Ponemos todo en marcha y te acompañamos durante el lanzamiento con soporte
-            técnico continuo. No te dejamos solo cuando empieza lo bueno.</p>
+            <p>Ponemos todo en marcha y te acompañamos con soporte técnico continuo. No te dejamos solo.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -569,12 +583,11 @@
 
       <div class="contact-grid">
 
-        <!-- Info lateral -->
         <div class="contact-info animate-on-scroll">
           <h3>¿Por qué elegirnos?</h3>
 
           <div class="contact-feature">
-            <div class="cf-icon" aria-hidden="true">⚡</div>
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-bolt"></i></div>
             <div>
               <strong>Respuesta rápida</strong>
               <p>Te respondemos en menos de 24 horas hábiles.</p>
@@ -582,7 +595,7 @@
           </div>
 
           <div class="contact-feature">
-            <div class="cf-icon" aria-hidden="true">💰</div>
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-tag"></i></div>
             <div>
               <strong>Precios accesibles</strong>
               <p>Planes adaptados a presupuestos de PYMEs y emprendedores.</p>
@@ -590,7 +603,7 @@
           </div>
 
           <div class="contact-feature">
-            <div class="cf-icon" aria-hidden="true">🎯</div>
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></div>
             <div>
               <strong>Sin letra chica</strong>
               <p>Todo claro desde el principio, sin sorpresas ni costos ocultos.</p>
@@ -598,7 +611,7 @@
           </div>
 
           <div class="contact-feature">
-            <div class="cf-icon" aria-hidden="true">🌍</div>
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-earth-americas"></i></div>
             <div>
               <strong>Trabajo 100% remoto</strong>
               <p>Trabajamos con empresas de cualquier punto de Argentina.</p>
@@ -606,7 +619,7 @@
           </div>
 
           <div class="contact-feature">
-            <div class="cf-icon" aria-hidden="true">🔄</div>
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-arrows-rotate"></i></div>
             <div>
               <strong>Revisiones incluidas</strong>
               <p>Ajustamos hasta que el resultado sea exactamente lo que imaginaste.</p>
@@ -614,14 +627,11 @@
           </div>
         </div>
 
-        <!-- Formulario -->
         <div class="contact-form-wrapper animate-on-scroll delay-2">
           <!--
             ============================================================
-            IMPORTANTE: Reemplazá "TU_CORREO@ejemplo.com" con tu email real.
+            IMPORTANTE: Reemplazá "TU_CORREO@ejemplo.com" con tu email.
             FormSubmit enviará las consultas a esa dirección.
-            La primera vez que se envíe un formulario, FormSubmit te pedirá
-            confirmar el email. Luego funciona automáticamente.
             ============================================================
           -->
           <form
@@ -631,58 +641,30 @@
             id="contactForm"
             novalidate
           >
-            <!-- Configuración FormSubmit -->
             <input type="hidden" name="_subject" value="Nueva consulta desde Nova Codice 🚀" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <!-- Desactivar redirección automática (opcional: podés poner una URL de "gracias") -->
             <input type="hidden" name="_next" value="" />
 
             <div class="form-row">
               <div class="form-group">
                 <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
-                <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  placeholder="Ej: María García"
-                  required
-                  autocomplete="name"
-                />
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: María García" required autocomplete="name" />
               </div>
               <div class="form-group">
                 <label for="empresa">Empresa / Emprendimiento</label>
-                <input
-                  type="text"
-                  id="empresa"
-                  name="empresa"
-                  placeholder="Ej: Mi Empresa S.A."
-                  autocomplete="organization"
-                />
+                <input type="text" id="empresa" name="empresa" placeholder="Ej: Mi Empresa S.A." autocomplete="organization" />
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email <span aria-hidden="true">*</span></label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Ej: maria@miempresa.com"
-                  required
-                  autocomplete="email"
-                />
+                <input type="email" id="email" name="email" placeholder="Ej: maria@miempresa.com" required autocomplete="email" />
               </div>
               <div class="form-group">
                 <label for="telefono">Teléfono / WhatsApp</label>
-                <input
-                  type="tel"
-                  id="telefono"
-                  name="telefono"
-                  placeholder="Ej: +54 9 11 1234-5678"
-                  autocomplete="tel"
-                />
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 11 1234-5678" autocomplete="tel" />
               </div>
             </div>
 
@@ -690,31 +672,22 @@
               <label for="servicio">¿Qué servicio te interesa? <span aria-hidden="true">*</span></label>
               <select id="servicio" name="servicio" required>
                 <option value="">Seleccioná una opción...</option>
-                <option value="Desarrollo Web">🌐 Desarrollo Web</option>
-                <option value="Software a Medida">💻 Software a Medida</option>
-                <option value="Redes Sociales / Community Manager">📱 Redes Sociales / Community Manager</option>
-                <option value="Pack Completo (Web + Redes)">🚀 Pack Completo (Web + Redes)</option>
-                <option value="Consulta General">💬 Consulta general</option>
+                <option value="Desarrollo Web">Desarrollo Web</option>
+                <option value="Software a Medida">Software a Medida</option>
+                <option value="Redes Sociales / Community Manager">Redes Sociales / Community Manager</option>
+                <option value="Pack Completo (Web + Redes)">Pack Completo (Web + Redes)</option>
+                <option value="Consulta General">Consulta general</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="mensaje">Contanos sobre tu proyecto <span aria-hidden="true">*</span></label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                rows="5"
-                placeholder="Describinos brevemente tu negocio, qué necesitás y cuáles son tus objetivos..."
-                required
-              ></textarea>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describinos brevemente tu negocio, qué necesitás y cuáles son tus objetivos..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
               <span class="btn-text">Enviar consulta</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             </button>
 
             <p class="form-note">
@@ -736,40 +709,31 @@
     <div class="container">
       <div class="footer-grid">
 
-        <!-- Brand -->
+          <!-- Brand: ícono imagen + texto -->
         <div class="footer-brand">
-          <img src="img/Nova Codice loguito 2.png" alt="Nova Codice" class="footer-logo" />
+          <div class="footer-logo-wrap">
+            <img src="img/Nova Codice Loguito.png" class="nav-logo-icon nav-logo-icon-lg" alt="" aria-hidden="true" />
+            <span class="logo-wordmark logo-wordmark-lg">
+              <span class="logo-nova">Nova</span><span class="logo-codice">Codice</span>
+            </span>
+          </div>
           <p>
             Llevamos tu negocio al mundo digital. Desarrollo web, software a medida y
             gestión de redes sociales para PYMEs y emprendedores.
           </p>
           <div class="footer-social" aria-label="Redes sociales de Nova Codice">
             <a href="#" class="social-icon" aria-label="Instagram de Nova Codice" rel="noopener noreferrer">
-              <!-- Instagram SVG -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             </a>
             <a href="#" class="social-icon" aria-label="LinkedIn de Nova Codice" rel="noopener noreferrer">
-              <!-- LinkedIn SVG -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </a>
             <a href="#" class="social-icon" aria-label="Twitter / X de Nova Codice" rel="noopener noreferrer">
-              <!-- X / Twitter SVG -->
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
             </a>
           </div>
         </div>
 
-        <!-- Links: Servicios -->
         <div class="footer-links">
           <h4>Servicios</h4>
           <ul role="list">
@@ -781,7 +745,6 @@
           </ul>
         </div>
 
-        <!-- Links: Empresa -->
         <div class="footer-links">
           <h4>Empresa</h4>
           <ul role="list">
@@ -792,37 +755,28 @@
           </ul>
         </div>
 
-        <!-- Contacto directo -->
         <div class="footer-contact">
           <h4>Contacto</h4>
           <a href="mailto:novacodice@gmail.com" class="footer-email">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
             novacodice@gmail.com
           </a>
           <p class="footer-location">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            Argentina · 100% remoto
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Argentina &middot; 100% remoto
           </p>
           <a href="#consultas" class="btn btn-primary btn-sm">Solicitar consulta</a>
         </div>
 
       </div>
 
-      <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>© 2025 Nova Codice. Todos los derechos reservados.</p>
-        <p>Hecho con ❤️ por el equipo Nova Codice</p>
+        <p>&copy; 2025 Nova Codice. Todos los derechos reservados.</p>
+        <p>Hecho con <i class="fa-solid fa-heart footer-heart" aria-hidden="true"></i> por el equipo Nova Codice</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>
