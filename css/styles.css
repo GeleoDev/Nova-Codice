@@ -1198,10 +1198,13 @@ input, select, textarea { font-family: var(--font-body); }
   position: relative;
 }
 
-.process-steps::before {
+/* Connector line: drawn per-step so it stops exactly at the last circle */
+.process-step:not(:last-child)::after {
   content: '';
   position: absolute;
-  left: 35px; top: 10px; bottom: 10px;
+  left: 35px;
+  top: calc(2.5rem + 36px);      /* center of this step's circle */
+  bottom: calc(-2.5rem - 36px);  /* extends into next step to meet its circle center */
   width: 2px;
   background: linear-gradient(to bottom, var(--purple), var(--mint));
   z-index: 0;
@@ -1228,6 +1231,8 @@ input, select, textarea { font-family: var(--font-body); }
   font-weight: 800; font-size: 1rem;
   color: #fff;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
   box-shadow:
     0 0 0 5px var(--bg),
     0 0 0 7px rgba(108, 43, 255, 0.22),
@@ -1564,7 +1569,7 @@ input, select, textarea { font-family: var(--font-body); }
   .footer-grid   { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
 
-  .process-steps::before { left: 35px; }
+  /* .process-steps::before removed — line is now drawn per step via ::after */
 }
 
 @media (max-width: 480px) {
@@ -1582,4 +1587,32 @@ input, select, textarea { font-family: var(--font-body); }
   .about-card-glow { display: none; }
 
   .footer { padding: 4rem 0 2rem; }
+}
+
+
+/* ===========================
+   16. CONTAIN — limita el área de repintado
+   =========================== */
+.service-card,
+.value-card {
+  contain: layout style;
+}
+
+
+/* ===========================
+   17. REDUCED MOTION
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

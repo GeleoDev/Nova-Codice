@@ -1,10 +1,31 @@
 /**
  * ============================================================
- * NOVA CODICE — main.js  (v2 - optimizado)
+ * NOVA CODICE — main.js  (v3 - performance optimizado)
  * ============================================================
  */
 
 'use strict';
+
+// ============================================================
+// SCROLL SCHEDULER
+// Un único listener de scroll que ejecuta todos los callbacks
+// con throttle via requestAnimationFrame — evita trabajo duplicado
+// ============================================================
+let _scrollTicking = false;
+const _scrollCbs = [];
+
+function addScrollCallback(fn) { _scrollCbs.push(fn); }
+
+window.addEventListener('scroll', () => {
+  if (!_scrollTicking) {
+    requestAnimationFrame(() => {
+      _scrollCbs.forEach(fn => fn());
+      _scrollTicking = false;
+    });
+    _scrollTicking = true;
+  }
+}, { passive: true });
+
 
 // ============================================================
 // 1. NAVBAR — efecto scroll
@@ -15,7 +36,7 @@ function handleNavbarScroll() {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 }
 
-window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+addScrollCallback(handleNavbarScroll);
 handleNavbarScroll();
 
 
@@ -68,23 +89,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // ============================================================
-// 4. ACTIVE NAV LINK
+// 4. ACTIVE NAV LINK — con offsets cacheados para evitar
+//    layout thrashing en cada evento de scroll
 // ============================================================
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+const sections  = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-links a, .mobile-menu a');
+let sectionOffsets = [];
+
+function cacheSectionOffsets() {
+  sectionOffsets = Array.from(sections).map(sec => ({
+    id:  sec.getAttribute('id'),
+    top: sec.offsetTop,
+  }));
+}
 
 function updateActiveLink() {
   const scrollPos = window.scrollY + navbar.offsetHeight + 120;
   let current = '';
-  sections.forEach(sec => {
-    if (scrollPos >= sec.offsetTop) current = sec.getAttribute('id');
-  });
+  for (const { id, top } of sectionOffsets) {
+    if (scrollPos >= top) current = id;
+  }
   navLinks.forEach(link => {
     link.classList.toggle('active-nav', link.getAttribute('href') === `#${current}`);
   });
 }
 
-window.addEventListener('scroll', updateActiveLink, { passive: true });
+cacheSectionOffsets();
+addScrollCallback(updateActiveLink);
+
+let _resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(_resizeTimer);
+  _resizeTimer = setTimeout(cacheSectionOffsets, 250);
+}, { passive: true });
 
 
 // ============================================================
@@ -126,7 +163,8 @@ if (aboutCard) {
 
 
 // ============================================================
-// 7. COUNTER ANIMATION
+// 7. COUNTER ANIMATION — requestAnimationFrame en lugar de
+//    setInterval para sincronizar con el ciclo de render
 // ============================================================
 let countersStarted = false;
 const statNumbers = document.querySelectorAll('.stat-number[data-count]');
@@ -135,18 +173,22 @@ function animateCounters() {
   if (countersStarted) return;
   countersStarted = true;
 
-  statNumbers.forEach(el => {
-    const target = parseInt(el.dataset.count, 10);
-    const totalFrames = Math.round(2000 / (1000 / 60));
-    let frame = 0;
+  const duration = 2000;
+  const startTs  = performance.now();
+  const targets  = Array.from(statNumbers).map(el => parseInt(el.dataset.count, 10));
 
-    const easeOut = t => t * (2 - t);
-    const timer = setInterval(() => {
-      frame++;
-      el.textContent = Math.round(target * easeOut(frame / totalFrames));
-      if (frame >= totalFrames) { el.textContent = target; clearInterval(timer); }
-    }, 1000 / 60);
-  });
+  function step(now) {
+    const progress = Math.min((now - startTs) / duration, 1);
+    const eased    = progress * (2 - progress);
+    statNumbers.forEach((el, i) => { el.textContent = Math.round(targets[i] * eased); });
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    } else {
+      statNumbers.forEach((el, i) => { el.textContent = targets[i]; });
+    }
+  }
+
+  requestAnimationFrame(step);
 }
 
 const heroStats = document.querySelector('.hero-stats');
@@ -177,28 +219,20 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 
 
 // ============================================================
-// 9. BG ORBS — fade-in al cargar + rotación suave al scrollear
-//    Los orbs son elipses ancladas a su sección (position:absolute).
-//    La rotación las hace "moverse" sin que cambien de lugar.
+// 9. BG ORBS — fade-in + rotación via scroll scheduler unificado
 // ============================================================
 (function initBgOrbs() {
   const orbs = document.querySelectorAll('.bg-orb');
   if (!orbs.length) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    orbs.forEach((o, i) => { o.style.opacity = '0.22'; });
+    orbs.forEach((o, i) => { o.style.opacity = String([0.28, 0.24, 0.26, 0.22, 0.20][i]); });
     return;
   }
 
-  // Opacidad estática de cada orb (sutiles)
-  const opacity = [0.28, 0.24, 0.26, 0.22, 0.20];
-
-  // Rotación base de cada orb (ángulo inicial distinto para variedad)
-  const baseRot = [12, -20, 35, -10, 50];
-
-  // Cuántos grados rota por cada 1000px scrolleados (lento = sutil)
+  const opacity  = [0.28, 0.24, 0.26, 0.22, 0.20];
+  const baseRot  = [12, -20, 35, -10, 50];
   const rotSpeed = [0.025, -0.020, 0.018, -0.022, 0.015];
 
-  // Fade-in suave y escalonado al cargar
   orbs.forEach((orb, i) => {
     orb.style.transition = `opacity 1.6s ease ${i * 0.2}s`;
     requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -210,17 +244,18 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     const sy = window.scrollY;
     orbs.forEach((orb, i) => {
       const deg = baseRot[i] + sy * rotSpeed[i];
-      // Solo rotación — el orb no se mueve de su posición en la página
       orb.style.transform = `rotate(${deg.toFixed(2)}deg)`;
     });
   }
 
-  window.addEventListener('scroll', updateOrbs, { passive: true });
+  addScrollCallback(updateOrbs);
   updateOrbs();
 })();
 
+
 // ============================================================
-// 11. PARTICLE CANVAS — versión optimizada (sin conexiones)
+// 10. PARTICLE CANVAS — se pausa automáticamente cuando el
+//     hero sale del viewport (IntersectionObserver)
 // ============================================================
 (function initParticles() {
   const canvas = document.getElementById('particleCanvas');
@@ -228,7 +263,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const ctx = canvas.getContext('2d');
-  let particles = [], animId, W, H;
+  let particles = [], animId = null, W, H;
 
   function resize() {
     W = canvas.width  = canvas.offsetWidth;
@@ -259,7 +294,6 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     }
   }
 
-  // Conexiones ligeras: solo entre partículas cercanas, con límite de pares
   function drawLines() {
     const maxDist = 100;
     const len = particles.length;
@@ -281,35 +315,45 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   }
 
   function init() {
-    // Máximo 45 partículas para buena performance en cualquier equipo
     const count = Math.min(45, Math.floor((W * H) / 18000));
     particles = Array.from({ length: count }, () => new Dot());
   }
 
-  function animate() {
+  function run() {
     ctx.clearRect(0, 0, W, H);
     particles.forEach(p => { p.update(); p.draw(); });
     drawLines();
-    animId = requestAnimationFrame(animate);
+    animId = requestAnimationFrame(run);
   }
 
-  resize(); init(); animate();
+  function stop() {
+    if (animId !== null) { cancelAnimationFrame(animId); animId = null; }
+  }
+
+  resize(); init(); run();
+
+  // Pausa el canvas cuando el hero abandona el viewport
+  const heroSection = canvas.closest('section') ?? canvas.parentElement;
+  new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) { if (animId === null) run(); }
+    else stop();
+  }, { threshold: 0 }).observe(heroSection);
 
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) cancelAnimationFrame(animId);
-    else animate();
+    if (document.hidden) stop();
+    else if (animId === null) run();
   });
 
-  let resizeTimer;
+  let _particleResizeTimer;
   window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => { resize(); init(); }, 250);
+    clearTimeout(_particleResizeTimer);
+    _particleResizeTimer = setTimeout(() => { resize(); init(); }, 250);
   }, { passive: true });
 })();
 
 
 // ============================================================
-// 10. FORM — validación y feedback
+// 11. FORM — validación y feedback
 // ============================================================
 const contactForm = document.getElementById('contactForm');
 const submitBtn   = document.getElementById('submitBtn');
@@ -338,7 +382,6 @@ if (contactForm && submitBtn) {
     submitBtn.disabled = true;
     submitBtn.style.opacity = '0.75';
 
-    // Restaurar si no hubo redirección
     setTimeout(() => {
       if (submitBtn.disabled) {
         if (btnText) btnText.textContent = 'Enviar consulta';
@@ -348,7 +391,6 @@ if (contactForm && submitBtn) {
     }, 7000);
   });
 
-  // Limpiar error al escribir
   contactForm.querySelectorAll('input, select, textarea').forEach(f => {
     f.addEventListener('input', () => {
       if (f.value.trim()) { f.style.borderColor = ''; f.style.boxShadow = ''; }

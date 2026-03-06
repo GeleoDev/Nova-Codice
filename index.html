@@ -19,6 +19,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
+  <!-- Preconnect para Font Awesome CDN -->
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -43,7 +47,7 @@
 
       <!-- Logo: ícono imagen + texto -->
       <a href="#inicio" class="nav-logo" aria-label="Nova Codice - Inicio">
-        <img src="img/Nova Codice Loguito.png" class="nav-logo-icon" alt="" aria-hidden="true" />
+        <img src="img/Nova Codice Loguito.png" class="nav-logo-icon" alt="" aria-hidden="true" fetchpriority="high" />
         <span class="logo-wordmark">
           <span class="logo-nova">Nova</span><span class="logo-codice">Codice</span>
         </span>
@@ -226,7 +230,7 @@
         <div class="about-visual animate-on-scroll delay-2">
           <div class="about-card">
             <div class="about-card-glow" aria-hidden="true"></div>
-            <img src="img/Nova Codice Loguito.png" alt="Nova Codice" class="about-logo" />
+            <img src="img/Nova Codice Loguito.png" alt="Nova Codice" class="about-logo" loading="lazy" />
             <h3>Nova Codice</h3>
             <p>Tu puerta al mundo digital</p>
             <div class="about-card-features">
@@ -712,7 +716,7 @@
           <!-- Brand: ícono imagen + texto -->
         <div class="footer-brand">
           <div class="footer-logo-wrap">
-            <img src="img/Nova Codice Loguito.png" class="nav-logo-icon nav-logo-icon-lg" alt="" aria-hidden="true" />
+            <img src="img/Nova Codice Loguito.png" class="nav-logo-icon nav-logo-icon-lg" alt="" aria-hidden="true" loading="lazy" />
             <span class="logo-wordmark logo-wordmark-lg">
               <span class="logo-nova">Nova</span><span class="logo-codice">Codice</span>
             </span>
@@ -777,6 +781,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
